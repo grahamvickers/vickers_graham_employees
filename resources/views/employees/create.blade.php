@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="mainDiv">
+    <div id="mainDiv">
         <h1>Create A New Employee Profile:</h1>
         @if($errors->any())
             @foreach ($errors->all() as $error)
@@ -10,6 +10,7 @@
                 </p>
             @endforeach
         @endif
+        
         <form method="POST" action="{ route('employees.store') }}">
             @csrf 
             <label for="first_name">First Name:</label>
