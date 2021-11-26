@@ -6,7 +6,7 @@
             <h1>Manage Royal Hunt Landscape Employees</h1>
             @foreach($employees as $employee)
                 <div>
-                    <img src="{{ $employee->thumbnail}}" alt="Employee Icon">
+                    <img src="/images/{{ $employee->thumbnail }}" alt="Employee Icon">
                     <a href="{{ route('employees.show',$employee) }}">
                         {{ $employee->first_name }} {{ $employee->last_name }}
                     </a>
