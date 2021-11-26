@@ -11,8 +11,8 @@ class EmployeeSeeder extends Seeder
      * @var array
      */
     protected $employees = [
-        ['first_name'=> 'Alex', 'last_name' => 'Choi', 'email' => 'unicornv24@gmail.com', 'thumbnail' => './public/images/person1-th.png', 'profile_pic' => './public/images/person1.png'],
-        ['first_name'=> 'Damon', 'last_name' => 'Fryer', 'email' => 'dde@gmail.com', 'thumbnail' => './public/images/person2-th.png', 'profile_pic' => './public/images/person2.png']
+        ['first_name'=> 'Alex', 'last_name' => 'Choi', 'email' => 'unicornv24@gmail.com', 'thumbnail' => 'person1-th.png', 'profile_pic' => 'person1.png'],
+        ['first_name'=> 'Damon', 'last_name' => 'Fryer', 'email' => 'dde@gmail.com', 'thumbnail' => 'person2-th.png', 'profile_pic' => 'person2.png']
     ];
 
     
