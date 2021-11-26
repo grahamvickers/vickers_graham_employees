@@ -23,3 +23,6 @@ Route::get('/employees/create', 'EmployeeController@create')
     
 Route::get('/employees/{employee}', 'EmployeeController@show')
     ->name('employees.show');
+
+Route::delete('/employees/{employee}', 'EmployeeController@destroy')
+    ->name('employees.destroy');

@@ -1,12 +1,138 @@
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 200;
-    height: 100vh;
-    margin: 0;
+// html, body {
+//     // background-color: #fff;
+//     color: #636b6f;
+//     font-family: 'Nunito', sans-serif;
+//     font-weight: 200;
+//     height: 100vh;
+//     margin: 0;
+//}
+
+.hidden{
+    display: none;
 }
 
+// all font adjustments
+h1{
+    color: #143852;
+    font-size: 42px;
+    font-family: roboto, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2{
+    color: #143852;
+    font-size: 36px;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p{
+    color: #3f3f3f;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-family: roboto, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    background: #143852;
+    padding: 10px;
+}
+
+// header adjustments
+
+footer{
+    background: #143852;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+#footP{
+    color: #f2f2f2;
+}
+
+#mainHead{
+    background: #143852;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    width: 300px;
+}
+
+#mainNav{
+   list-style: none;
+   width: 250px;
+   display: flex;
+   flex-direction: row;    
+   justify-content: space-between;
+}
+
+#mainNav ul li{
+    display: inline;
+
+}
+
+#mainNav ul li a{
+   text-decoration: none;
+   color: #f2f2f2;
+    
+}
+
+// main sectioning elements 
+#mainDiv{
+    padding: 40px 60px 40px 60px;
+
+
+}
+
+table{
+    margin-top: 40px;
+    border: 2px solid #143852;
+    padding: 20px;
+    width: 80%;
+}
+tr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    border: 1px solid #143852;
+   
+}
+
+td a{
+    padding: 10px 20px 10px 20px;
+}
+
+tr:nth-child(odd){
+    background: #e7e8e8;
+    
+}
+.employeeCon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 40px;
+}
+
+// laravel pre sets
 .full-height {
     height: 100vh;
 }
