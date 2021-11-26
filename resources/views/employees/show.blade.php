@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="mainDiv">
+    <div id="mainDiv">
         <h1>Employee {{ $employee->first_name }} {{ $employee->last_name }}'s Profile</h1>
         <div id="employeeShow">
             <img src="/images/{{ $employee->profile_pic }}" alt="{{ $employee->first_name }}">
