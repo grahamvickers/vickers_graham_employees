@@ -26,7 +26,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        return view('employees.create');
     }
 
     /**
@@ -50,6 +50,23 @@ class EmployeeController extends Controller
     {
         return view('employees.show', compact('employee'));
     }
+
+    /**
+     * Display the searched employee.
+     *
+     * @param  \App\Employee  $employee
+     * @return \Illuminate\Http\Response
+     */
+    // public function search(Employee $employee)
+    // {   
+    //     $search = $employee->input('search');
+
+    //     Employee::where('first_name', 'LIKE', "%{$employee->q}%")
+    //         ->orWhere('last_name', 'LIKE', "%{$employee->q}%")
+    //         ->get(id);
+        
+    //     return view('employees.index');
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -82,6 +99,8 @@ class EmployeeController extends Controller
      */
     public function destroy(Employee $employee)
     {
-        //
+        $employee->delete();
+
+        return redirect()->route('employees.index');
     }
 }
