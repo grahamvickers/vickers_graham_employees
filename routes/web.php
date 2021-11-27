@@ -20,9 +20,18 @@ Route::get('/employees', 'EmployeeController@index')
 
 Route::get('/employees/create', 'EmployeeController@create')
     ->name('employees.create');
+
+Route::post('/employees', 'EmployeeController@store')
+    ->name('employees.store');
     
 Route::get('/employees/{employee}', 'EmployeeController@show')
     ->name('employees.show');
+
+Route::get('/employees/{employee}/edit', 'EmployeeController@edit')
+    ->name('employees.edit');
+
+Route::patch('/employees/{employee}', 'EmployeeController@update')
+    ->name('employees.update');
 
 Route::delete('/employees/{employee}', 'EmployeeController@destroy')
     ->name('employees.destroy');
