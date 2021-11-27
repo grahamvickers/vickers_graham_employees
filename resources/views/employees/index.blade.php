@@ -3,6 +3,8 @@
 @section('content')
     <div id="mainDiv">
         <h1>Manage Royal Hunt Landscape Employees</h1>
+
+
         <table>
             <tr>
                 <th>Headshot</th>
@@ -14,7 +16,7 @@
                 <td><img src="/images/{{ $employee->thumbnail }}" alt="Employee Icon"></td>
                 <td>{{ $employee->first_name }} {{ $employee->last_name }}</td>
                 <td>
-                    <a href="{{ route('employees.show',$employee) }}">
+                    <a href="{{ route('employees.show', $employee) }}">
                         EDIT
                     </a>
                 </td>

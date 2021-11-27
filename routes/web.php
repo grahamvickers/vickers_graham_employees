@@ -18,6 +18,9 @@ Route::get('/', function () {
 Route::get('/employees', 'EmployeeController@index')
     ->name('employees.index');
 
+// Route::get('/employees/{employee}', 'EmployeeController@search')
+//     ->name('employees.search');
+
 Route::get('/employees/create', 'EmployeeController@create')
     ->name('employees.create');
 
