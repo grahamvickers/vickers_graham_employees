@@ -11,24 +11,25 @@
             @endforeach
         @endif
 
-        <form  action="{{ route('employees.store') }}" method="POST">
+        <form  action="{{ route('employees.update', ['employee' => $employee]) }}" method="POST">
             @csrf 
+            @method('PATCH') 
             <label for="first_name">First Name:</label>
-            <input name="first_name" id="first_name" type="text">
+            <input name="first_name" id="first_name" type="text" value="{{ $employee->first_name }}">
 
             <label for="last_name">Last Name:</label>
-            <input name="last_name" id="last_name" type="text">
+            <input name="last_name" id="last_name" type="text" value="{{ $employee->last_name }}">
 
             <label for="email">Email:</label>
-            <input name="email" id="email" type="email">
+            <input name="email" id="email" type="email" value="{{ $employee->email }}">
 
             <label for="thumbnail">Thumbnail Picture:</label>
-            <input name="thumbnail" id="thumbnail" type="text">
+            <input name="thumbnail" id="thumbnail" type="text" value="{{ $employee->thumbnail}}">
 
             <label for="profile_pic">Profile Picture:</label>
-            <input name="profile_pic" id="profile_pic" type="text">
+            <input name="profile_pic" id="profile_pic" type="text" value="{{ $employee->profile_pic }}">
             
-            <button type="submit">CREATE PROFILE</button>
+            <button type="submit">SAVE CHANGES</button>
         </form>
     </div>
 @endsection

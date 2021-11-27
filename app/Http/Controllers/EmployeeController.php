@@ -36,8 +36,18 @@ class EmployeeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        $request->validate([
+            'first_name' => 'required|max:60',
+            'last_name' => 'required|max:60',
+            'email' => 'required|max:60',
+            'thumbnail' => 'required|max:60',
+            'profile_pic' => 'required|max:60',
+        ]);
+
+        Employee::create($request->all());
+        
+        return redirect()->route('employees.index');
     }
 
     /**
@@ -76,7 +86,7 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        //
+        return view('employees.edit', compact('employee'));
     }
 
     /**
@@ -88,7 +98,19 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, Employee $employee)
     {
-        //
+        $request->validate([
+            'first_name' => 'required|max:60',
+            'last_name' => 'required|max:60',
+            'email' => 'required|max:60',
+            'thumbnail' => 'required|max:60',
+            'profile_pic' => 'required|max:60',
+        ]);
+
+        \DB::table('employees')
+            ->where('id', $employee->id)
+            ->update($request->only(['first_name', 'last_name', 'email', 'thumbnail', 'profile_pic']));
+
+        return redirect()->route('employees.show', compact('employee'));
     }
 
     /**
