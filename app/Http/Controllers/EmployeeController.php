@@ -67,13 +67,13 @@ class EmployeeController extends Controller
      * @param  \App\Employee  $employee
      * @return \Illuminate\Http\Response
      */
-    // public function search(Employee $employee)
+    // public function search(Request $request)
     // {   
-    //     $search = $employee->input('search');
+    //     $search = $request->input('search');
 
-    //     Employee::where('first_name', 'LIKE', "%{$employee->q}%")
-    //         ->orWhere('last_name', 'LIKE', "%{$employee->q}%")
-    //         ->get(id);
+    //     Employee::where('first_name', 'LIKE', "%{$request->q}%")
+    //         ->orWhere('last_name', 'LIKE', "%{$request->q}%")
+    //         ->get('id');
         
     //     return view('employees.index');
     // }
